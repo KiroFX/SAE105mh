@@ -37,5 +37,40 @@ body {
 
 .nav-item{
     display: inline-block;
-    
+    margin: 0px 10px;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color:#005a48;
+    font-weight: 600;
+}
+
+.nav-search{
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.nav-search__el{
+    background: #c5c5c5;
+    width: 40%;
+    padding: 5px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.search-input{
+    background: #c5c5c5;
+    border: none;
+    flex-basis: 60%;
+    outline: none;
+}
+
+.nav-search__el i{
+    flex-basis: 40%;
 }
