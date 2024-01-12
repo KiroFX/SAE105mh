@@ -1,7 +1,7 @@
+/* Importation de la police Montserrat depuis Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
-
+/* Réinitialisation des styles par défaut et configuration des styles de base pour la page */
 body {
     margin: 0;
     padding: 0;
@@ -10,50 +10,58 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.header-logo{
+/* Styles pour le logo de l'en-tête */
+.header-logo {
     display: inline-block;
     width: 90%;
     padding: 10px 30px;
 }
 
-.header-logo a{
+/* Styles pour le lien du logo de l'en-tête */
+.header-logo a {
     text-decoration: none;
     color: #005a48;
     font-size: 1.5rem;
-     font-weight: bold;
+    font-weight: bold;
 }
 
-.nav{
+/* Styles pour le conteneur de navigation */
+.nav {
     display: inline-block;
     width: 90%;
 }
 
-.nav-items{
+/* Styles pour le conteneur des éléments de navigation */
+.nav-items {
     display: inline-block;
     width: calc(70% - 100px);
     vertical-align: middle;
     text-align: center;
 }
 
-.nav-item{
+/* Styles pour les éléments individuels de navigation */
+.nav-item {
     display: inline-block;
     margin: 0px 10px;
 }
 
-.nav-item a{
+/* Styles pour les liens des éléments de navigation */
+.nav-item a {
     text-decoration: none;
-    color:#005a48;
+    color: #005a48;
     font-weight: 600;
 }
 
-.nav-search{
+/* Styles pour le conteneur de recherche dans la navigation */
+.nav-search {
     display: inline-block;
     width: 30%;
     vertical-align: middle;
     text-align: center;
 }
 
-.nav-search__el{
+/* Styles pour le conteneur de saisie de recherche */
+.nav-search__el {
     background: #c5c5c5;
     width: 40%;
     padding: 5px;
@@ -64,13 +72,15 @@ body {
     align-items: center;
 }
 
-.search-input{
+/* Styles pour le champ de saisie de recherche */
+.search-input {
     background: #c5c5c5;
     border: none;
     flex-basis: 60%;
     outline: none;
 }
 
-.nav-search__el i{
+/* Styles pour l'icône de recherche dans le conteneur de recherche */
+.nav-search__el i {
     flex-basis: 40%;
 }

@@ -15,26 +15,56 @@
 </head>
 <body>
 	<header>
+		<!-- Logo et lien du cabinet dentaire -->
 		<div class="header-logo"><a href="logo">Logo du cabinet Dentaire Sourire Sain</a></div>
 
+		<!-- Navigation -->
 		<nav class="nav">
 			<ul class="nav-items">
+				<!-- Liens de navigation -->
 				<li class="nav-item"><a href="">Accueil</a></li>
 				<li class="nav-item"><a href="">À propos</a></li>
-				<li class="nav-item"><a href="">Services</a></li>
 				<li class="nav-item"><a href="">Informations</a></li>
-				<!-- Dans informations : Mettre Informations patients, technologiques et équipements, témoignages.!-->
+				<!-- Dans informations : Mettre Informations patients, technologiques et équipements, témoignages, services. -->
 				<li class="nav-item"><a href="">Contact</a></li>
 			</ul>
+			
+			<!-- Barre de recherche -->
 			<div class="nav-search">
 				<div class="nav-search__el">
+					<!-- Icône de recherche -->
 					<i class="las la-search"></i>
+					<!-- Champ de saisie de recherche -->
 					<input type="text" placeholder="Rechercher" class="search-input"/>
 				</div>
 			</div>
 		</nav>
-
-
 	</header>
+	<section class="slider-container">
+		<div class="glide">
+			<div class="glide__track" data-glide-el="track">
+			  <ul class="glide__slides">
+				<li class="glide__slide">0</li>
+				<li class="glide__slide">1</li>
+				<li class="glide__slide">2</li>
+			  </ul>
+			</div>
+		  </div>
+	</section>
+
+
+
+	<script>
+		new Glide('.glide', {
+			type:'carousel'
+			perView: 5,
+			focusAt:'center',
+			autoplay: 3000,
+			arrows: {
+				prev:'.glide__arrow--left',
+				next:'glide__arrow--right'
+			},
+		}).mount();
+	  </script>
 </body>
 </html>
