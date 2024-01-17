@@ -27,28 +27,32 @@
 
     <div class="contact" id="contact">
         <h2 class="title-category">Contact</h2>
-        <div class="form-contact-container" 
-        <form action="" method="" class="form-contact">
-            <div class="form-top">
-                <div class="form-left">
-                    <div><label for="nom">Nom</label>
-                        <input type="text" name="nom" placeholder="Bruet" 
+        <div class="form-contact-container">
+            <form action="" method="post" class="form-contact">
+                <div class="form-top">
+                    <div class="form-left">
+                        <div>
+                            <label for="nom">Nom</label>
+                            <input type="text" name="nom" placeholder="Bruet">
+                        </div>
+                        <div>
+                            <label for="email">E-Mail</label>
+                            <input type="email" name="email" placeholder="dentistesouriresain@gmail.com">
+                        </div>
                     </div>
-                    <div>
-                        <label for="email">E-Mail</label>
-                        <input type="email" name="email" placeholder="dentistesouriresain@gmail.com">
+                    <div class="form-right">
+                        <div>
+                            <label for="message">Message</label>
+                            <textarea name="message" cols="30" rows="5" placeholder="je vous contacte pour..."></textarea>
+                        </div>
                     </div>
-                </div>
-                <div class="form-right"></div>
-                    <label for="message">Message</label>
-                    <textarea name="message" cols="30" rows="5"
-                    placeholder="je vous contacte pour..."></textarea>
                 </div>
                 <div class="form-bottom">
                     <input type="submit" name="envoyer" value="Envoyer">
                 </div>
-                </form>
-            </div>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>

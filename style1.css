@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    background-color: #222222;
+    position: relative;
+    height: 80px;
+    top: 0;
+}
+
+header>* {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 30px 0 10px;
+}
+
+header img {
+    padding-top: 30px;
+    width: 120px;
+}
+
+header>ul {
+    right: 0;
+    text-decoration: none;
+}
+
+header,
+header a {
+    color: white;
+}
+
+header a:nth-child(2) {
+    font-size: 16px;
+    margin-left: 100px;
+}
+
+header>ul li {
+    margin: 10px;
+    font-weight: 600;
+    display: inline-block;
+    list-style: none;
+    transition: background-color 0,5s ease-in-out;
+}
+
+header>ul li a:hover {
+    color: #fff;
+}
+
+.page-main {
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.bienvenue {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.bienvenue>img {
+    width: 500px;
+    align-self: center;
+    border-radius: 5px;
+    flex-shrink: 0; 
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0,1);
+}
+
+.bienvenue>.texte {
+    width: 500px;
+    margin-left: 20px;
+    flex-grow: 1; 
+}
+
+.texte p {
+    text-align: justify;
+    font-size: 20px;
+    margin: 0; 
+}
+
+.separator {
+    height: 3px;
+    background-color: #036D19;
+    width: 100%;
+    margin: 20px 0;
+}
