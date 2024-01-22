@@ -17,47 +17,57 @@
 
     <!-- Header -->
     <header>
-        <a href="/"><img src="logo.png" alt="Logo du cabinet"></a>
-        <a href="/" Mon site></a>
+        <a href="/"><img src="img/logo.png" alt="Logo du cabinet"></a>
         <ul>
-			<li><a href="file:///C:/Users/kiroe/Documents/GitHub/SAE105/index.html" alt="Pour rediriger vers la page d'accueil">Accueil</a></li>
-			<li><a href="file:///C:/Users/kiroe/Documents/GitHub/SAE105/Apropos/apropos.html" alt="Pour rediriger vers la page à propos">À propos</a></li>
-			<li><a href="pg/Page-informations" alt="Pour rediriger vers la page informations">Informations</a></li>
-			<li><a href="file:///C:/Users/kiroe/Documents/GitHub/SAE105/Nouscontacter/contact.html" alt="Pour rediriger vers la page contact">Contact</a></li>
-
+            <li><a href="index.html" alt="Pour rediriger vers la page d'accueil">Accueil</a></li>
+            <li><a href="Apropos/apropos.html" alt="Pour rediriger vers la page à propos">À propos</a></li>
+            <li class="has-sous-nav">
+                <a href="/" alt="Pour rediriger vers la page informations"><span>Informations</span></a>
+                <ul class="sous-nav">
+                    <li><a href="services/services.html">Services</a></li>
+                    <li><a href="info-patients/info-patients.html">Informations patients</a></li>
+                    <li><a href="temoignages/témoignages.html">Témoignages</a></li>
+                </ul>
+            </li>
+            <li><a href="Nouscontacter/contact.html" alt="Pour rediriger vers la page contact">Contact</a></li>
         </ul>
     </header>
     <!-- Header -->
     <div class="page-main">
-    <div class="contact" id="contact">
-        <h2 class="title-category">Contact</h2>
-        <div class="form-contact-container">
-            <form action="" method="post" class="form-contact">
-                <div class="form-top">
-                    <div class="form-left">
-                        <div>
-                            <label for="nom">Nom</label>
-                            <input type="text" name="nom" placeholder="Bruet Pierre">
-                        </div>
-                        <div>
-                            <label for="email">E-Mail</label>
-                            <input type="email" name="email" placeholder="dentistesouriresain@gmail.com">
-                        </div>
-                    </div>
-                    <div class="form-right">
-                        <div>
-                            <label for="message">Message</label>
-                            <textarea name="message" cols="30" rows="5" placeholder="je vous contacte pour..."></textarea>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-bottom">
-                    <input type="submit" name="envoyer" value="Envoyer">
-                </div>
-            </form>
+    <div class="wrapper">
+    <h1>Vous souhaitez contacter un spécialiste ?</h1>
+    <form action="#">
+        <div class="dbl-field">
+            <div class="field">
+                <input type="text" placeholder="Entrez votre nom">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="field">
+                <input type="text" placeholder="Entrez votre Prénom">
+                <i class="fas fa-envelope"></i>
+            </div>
         </div>
+        <div class="dbl-field">
+            <div class="field">
+                <input type="text" placeholder="Entrez votre numéro de téléphone">
+                <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="field">
+                <input type="text" placeholder="Entrez votre E-Mail">
+                <i class="fas fa-envelope"></i>
+            </div>
+        </div>
+        <div class="message">
+            ><textarea placeholder="Écrivez ici votre message"></textarea>
+            <i class="material-icons"></i>
+        </div>
+        <div class="button-area"></div>
+        <button type="submit">Envoyer</button>
+        <span>Message en cours d'envoi...</span>
+    </form>
     </div>
     </div>
+
     <footer>
 		<img src="img/logo.png">
 		<h2>®2023 - 2027 Dentiste Sourire Sain Inc.</h2>

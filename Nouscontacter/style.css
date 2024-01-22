@@ -1,5 +1,9 @@
+/* Importation de la police Montserrat depuis Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
+
+/* Réinitialisation des marges et des espacements par défaut, définition de la boîte et de la couleur de fond */
 body {
     margin: 0;
     padding: 0;
@@ -8,6 +12,9 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+
+
+/* Style de l'en-tête */
 header{
     background-color: #222222;
     position: relative;
@@ -43,7 +50,7 @@ header a:nth-child(2) {
     margin-left: 100px;
 }
 
-header>ul li {
+header>ul li:not(.sous-nav) {
     margin: 10px;
     font-weight: 600;
     display: inline-block;
@@ -55,12 +62,63 @@ header>ul li a:hover {
     color: #fff;
 }
 
-.page-main {
-    display: block;
-    width: 80%;
-    margin: auto;
-    margin-top: 100px;
+
+
+/* Style du sous-menu de navigation */
+.sous-nav {
+    z-index: 3;
+    list-style: none;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -22px;
+    background: #222222;
+    flex-direction: column;
+    width: 160px;
+    padding: 25px 0;
+    text-align: left; 
 }
+
+.sous-nav li {
+    margin: 10px 0;
+}
+
+.sous-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px; 
+    transition: background-color 0.2s ease-in-out;
+    display: block;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.sous-nav a span {
+    display: inline-block;
+    width: 100%;
+}
+
+.sous-nav a:hover span {
+    color: #fff;
+}
+
+.sous-nav a:hover {
+    background-color: #036D19;
+}
+
+.has-sous-nav {
+    position: relative; 
+}
+
+.has-sous-nav:hover .sous-nav{
+    display: flex;
+    position: absolute;
+}
+
+.has-sous-nav:not(:hover) .sous-nav {
+    display: none;
+}
+
 
 .separator {
     height: 3px;
@@ -69,62 +127,137 @@ header>ul li a:hover {
     margin: 30px 0;
 }
 
-input:not(input[type="submit"]), textarea{
-    border: none;
-    border-bottom: 2px solid #036D19;
-    resize: none;
-    outline: none;
-    font-family: "Montserrat";
-    width: 30vw;
-    margin-bottom: 20px;
-    font-size: 20px;
-}
 
-label {
-    margin-bottom: 10px;
-    font-weight: 600;
-    font-size: 20px;
-}
 
-.form-top {
+.page-main {
     display: flex;
-    flex-direction: row;
+    padding: 0 10px;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+
+.wrapper{
+    width: 750px;
+    background: #222222;
+    border-radius: 5px;
+}
+
+.wrapper h1{
+    font-size: 22px;
+    color: #fff;
+    font-weight: 600;
+    padding: 20px 30px;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.wrapper form{
+    margin: 50px 45px;
+    padding: 50px;
+}
+
+.form-field {
+    margin-bottom: 25px;
+}
+
+.form-field label {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 5px;
+    display: block;
+}
+
+form .dbl-field{
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    justify-content: space-between;
+}
+
+.dbl-field .field{
+    height: 50px;
     position: relative;
-    justify-content: space-between;
+    width: calc(100% / 2 - 13px);
 }
 
-.form-left {
+form .field input,
+form .message textarea{
+    height: 30px;
+    width: 100%;
+    outline: none;
+    padding: 0 18px 0 48px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    transition: border-color 0.3s ease-in-out;
+}
+
+form .field input::placeholder,
+form .message textarea::placeholder{
+    font-size: 16px;
+    color: #bfbfbf;
+}
+
+form .field input:focus,
+form .message textarea:focus{
+    border: 2px solid #036D19;
+}
+
+.wrapper form i{
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    color: #bfbfbf;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+form .field input:focus ~ i{
+    color: #036D19;
+}
+
+form .message{
+    position: relative;
+}
+
+form .message i{
+    top: 30px;
+    font-size: 22px;
+}
+
+form .message textarea{
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 120px;
+    max-height: 300px;
+    min-height: 120px;
+    padding: 15px 20px 0 48px;
+}
+
+form .button-area{
+    margin: 25px 0;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
 }
-
-.form-left>div * {
-    display: block;
-}
-
-.form-right * {
-    display: block;
-}
-
-.form-contact input[type="submit"] {
-    background-color: #036D19;
-    border-radius: 20px;
+.button-area button{
+    font-size: 18px;
     border: none;
-    padding: 10px;
-    font-weight: 600;
-    font-size: 20px;
-    color: white;
-    font-family: "Montserrat";
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0,5);
-    margin-bottom: 80px;
+    color: #fff;
     cursor: pointer;
-    transition: transform 0.5s ease-in-out;
+    border-radius: 5px;
+    background: #036D19;
+    padding: 13px 25px;
 }
 
-.form-contact input[type="submit"]:hover {
-    transform: translateY(-5px);
+.button-area span{
+    color: #036D19;
+    margin-left: 30px;
 }
+
 
 footer {
     height: 80px;

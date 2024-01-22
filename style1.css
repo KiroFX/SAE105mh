@@ -66,6 +66,7 @@ header>ul li a:hover {
 
 /* Style du sous-menu de navigation */
 .sous-nav {
+    z-index: 3;
     list-style: none;
     display: none;
     position: absolute;
@@ -76,7 +77,6 @@ header>ul li a:hover {
     width: 160px;
     padding: 25px 0;
     text-align: left; 
-    z-index: 1;
 }
 
 .sous-nav li {
@@ -123,6 +123,8 @@ header>ul li a:hover {
 
 /* Style du carrousel */
 #caroussel {
+    z-index: -3;
+    position: relative;
     width: 100%;
     margin: 0 auto;
     justify-content: center;
@@ -151,7 +153,7 @@ header>ul li a:hover {
         transform: translateX(-3200px)
     }
     56% {
-        transform: translateX(-4600px);
+        transform: translateX(-4400px);
     }
     70% {
         transform: translateX(-3200px);
