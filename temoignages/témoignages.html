@@ -7,7 +7,7 @@
     <title>Nous contacter </title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <script src='main.js'></script>
+    <script src='app.js'></script>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
 
     <!-- Header -->
     <header>
-        <a href="/"><img src="img/logo.png" alt="Logo du cabinet"></a>
+        <a href="/"><img src="logo.png" alt="Logo du cabinet"></a>
         <ul>
             <li><a href="index.html" alt="Pour rediriger vers la page d'accueil">Accueil</a></li>
             <li><a href="Apropos/apropos.html" alt="Pour rediriger vers la page à propos">À propos</a></li>
@@ -97,9 +97,15 @@
 
     
     <footer>
-        <img src="img/logo.png">
+        <img src="logo.png">
         <h2>®2023 - 2027 Dentiste Sourire Sain Inc.</h2>
     </footer>
+    <script src='app.js'></script>
+    <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
+    </script>
 </body>
 
 </html>

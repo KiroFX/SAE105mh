@@ -15,7 +15,7 @@ body {
 
 
 /* Style de l'en-tête */
-header {
+header{
     background-color: #222222;
     position: relative;
     height: 80px;
@@ -55,10 +55,10 @@ header>ul li:not(.sous-nav) {
     font-weight: 600;
     display: inline-block;
     list-style: none;
-    transition: background-color 0, 5s ease-in-out;
+    transition: background-color 0,5s ease-in-out;
 }
 
-header>ul li a:hover {
+header>ul li a:hover{
     color: #fff;
 }
 
@@ -76,7 +76,7 @@ header>ul li a:hover {
     flex-direction: column;
     width: 160px;
     padding: 25px 0;
-    text-align: left;
+    text-align: left; 
 }
 
 .sous-nav li {
@@ -86,11 +86,11 @@ header>ul li a:hover {
 .sous-nav a {
     color: white;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 10px 15px; 
     transition: background-color 0.2s ease-in-out;
     display: block;
-    width: 100%;
-    box-sizing: border-box;
+    width: 100%; 
+    box-sizing: border-box; 
 }
 
 .sous-nav a span {
@@ -108,10 +108,10 @@ header>ul li a:hover {
 }
 
 .has-sous-nav {
-    position: relative;
+    position: relative; 
 }
 
-.has-sous-nav:hover .sous-nav {
+.has-sous-nav:hover .sous-nav{
     display: flex;
     position: absolute;
 }
@@ -121,139 +121,84 @@ header>ul li a:hover {
 }
 
 
+/* Style de la page principale */
+.page-main {
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.infopatients h1{
+    font-size: 30px;
+    color: #036D19;
+}
+
+.wrapper{
+    margin-bottom: 0;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    min-height: 40vh;
+}
+
+img {
+    max-width: 200px;
+    float: left;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.text-box p{
+    padding: 0;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+/* Style du separateur */
 .separator {
     height: 3px;
     background-color: #036D19;
     width: 100%;
-    margin: 30px 0;
+    margin: 20px 0;
 }
 
 
 
-.page-main {
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    align-items: center;
-    background: #f5f5f5;
-}
 
-.contact-in {
-    width: 80%;
-    height: auto;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-    border-radius: 15px;
-    background: #fff;
-    box-shadow: 0px 0px 10px 0px #666;
-    margin-top: 30px;
-}
-
-.contact-map {
-    width: 100%;
-    height: auto;
-    flex: 50%;
-}
-
-.contact-map iframe {
-    width: 100%;
-    height: 100%;
-}
-
-.contact-form {
-    width: 100%;
-    height: auto;
-    flex: 50%;
-    text-align: center;
-    flex-direction: column;
-    align-items: flex-end;
-
-}
-
-.contact-form h1 {
-    margin-bottom: 10px;
-}
-
-.contact-form-txt {
-    height: 40px;
-    color: #000;
-    border: 1px solid #bcbcbc;
-    border-radius: 50px;
-    outline: none;
-    margin-bottom: 20px;
-    padding: 15px;
-    width: 70%;
-}
-
-
-.contact-form-txt::placeholder {
-    color: #aaa;
-}
-
-.contact-form-textarea {
-    width: 100%;
-    height: 130px;
-    color: #000;
-    border: 1px solid #bcbcbc;
-    border-radius: 10px;
-    outline: none;
-    margin-bottom: 20px;
-    padding: 15px;
-    font-family: 'Montserrat', sans-serif;
-    width: 70%;
-    resize: vertical;
-}
-
-.contact-form-textarea::placeholder {
-    color: #aaa;
-}
-
-.contact-form-btn {
-    width: 70%;
-    margin-left: auto;
-    padding: 10px 0;
-    font-size: 18px;
-    text-align: center;
-    text-transform: uppercase;
-    outline: none;
-    cursor: pointer;
-    border-radius: 50px;
-    background: #fff;
-    border: 1px solid #036D19;
-    color: #000000;
-}
-
-.contact-form-btn:hover {
-    background-color: #036D19;
-    border: 1px solid #036D19;
-    color: #fff;
-    transition: all ease 0.3s;
-}
-
-
+/* Style du pied de page */
 footer {
-    height: 80px;
-    position: fixed;
-    bottom: 0;
+    margin: 0;
+    padding: 0;
+    height: 150px;
     width: 100%;
     background-color: #222222;
-    display: flex;
+    display: flex; 
     align-items: center;
+    justify-content: center;
+    position: relative;
 }
+
 
 footer img {
     margin-top: 10px;
-    width: 100px;
-    height: auto;
+    width: 100px; 
+    height: auto; 
     position: absolute;
-    left: 10px;
+    left: 10px; 
     top: 50%;
     transform: translate(0, -50%);
 }
 
-footer h2 {
+footer h2{
     padding-bottom: 20px;
     font-size: 16px;
     position: absolute;
@@ -263,6 +208,7 @@ footer h2 {
     color: white;
 }
 
+/* Style du chargement */
 .loader {
     position: fixed;
     width: 100%;
@@ -271,10 +217,11 @@ footer h2 {
     background-color: #222222;
     top: 0;
     left: 0;
-    /* Assurez-vous que l'élément loader occupe tout l'écran */
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
     opacity: 1;
     transition: opacity 0.5s ease-out;
 }
@@ -286,6 +233,9 @@ footer h2 {
     text-align: center;
 }
 
+body.loaded {
+    overflow: auto;
+}
 
 .loader p::after {
     content: '';
@@ -314,11 +264,11 @@ footer h2 {
 }
 
 
+/* Médias requêtes pour un design réactif */
 @media screen and (max-width: 1100px) {
     .bienvenue>img {
         width: 300px;
     }
-
     .texte p {
         font-size: 16px;
     }
@@ -331,9 +281,7 @@ footer h2 {
         margin-bottom: 50px;
     }
 
-    .a-propos {
-        margin-bottom: 100px;
-    }
+    .a-propos {margin-bottom: 100px;}
 
     .picture-propos {
         width: 100%;
@@ -357,6 +305,8 @@ footer h2 {
         text-align: center;
     }
 
+
+
 }
 
 @media screen and (max-width: 700px) {
@@ -365,53 +315,26 @@ footer h2 {
         flex-direction: column;
     }
 
-    .bienvenue>.texte {
+    .bienvenue > .texte{
         width: initial;
     }
 
 
-    input,
-    textarea,
-    label,
-    .commentaire-text p {
+    input, textarea, label, .commentaire-text p {
         font-size: 16px;
 
     }
 
-    .picture-propos-text p,
-    .commentaire-text p,
-    .texte p {
+    .picture-propos-text p, .commentaire-text p, .texte p{
         font-size: 12px;
     }
 
-    .form-top {
+    .form-top{
         flex-direction: column;
         width: 100%;
     }
 
-    input:not(input[type="submit"]),
-    textarea {
+    input:not(input[type="submit"]), textarea {
         width: 100%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .contact-in {
-        flex-direction: column;
-    }
-
-    .contact-map,
-    .contact-form {
-        width: 100%;
-        flex: 100%;
-    }
-
-    .contact-form-txt,
-    .contact-form-textarea,
-    .contact-form-btn {
-        width: 100%;
-        /* Réinitialiser la largeur à 100% pour les éléments du formulaire */
-        margin-left: 0;
-        /* Réinitialiser la marge gauche pour les éléments du formulaire */
     }
 }

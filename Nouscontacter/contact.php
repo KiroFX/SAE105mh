@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -35,6 +38,15 @@
     <!-- Header -->
 
     <div class="page-main">
+
+
+    <?php if(array_key_exists('errors', $_SESSION)): ?>
+    <div class="alert alert-danger">
+        <?= implode('<br>', $_SESSION['errors']); ?>
+    </div>
+    <?php endif; ?>
+
+
         <div class="contact-in">
             <div class="contact-map">
                 <iframe
@@ -46,12 +58,12 @@
                 <h2>
                     Pour nous contacter :
                 </h2>
-                <form action="post_contact.php" method="POST">
-                    <input type="text" placeholder="Nom" class="contact-form-txt">
-                    <input type="text" placeholder="Prénom" class="contact-form-txt">
-                    <input type="text" placeholder="Adresse Mail" class="contact-form-txt">
-                    <textarea placeholder="Écrire..." class="contact-form-textarea"></textarea>
-                    <input type="submit" placeholder="Envoyer" class="contact-form-btn">
+                    <form action="post_contact.php" method="POST">
+                    <input type="text" placeholder="Nom" class="contact-form-txt" name="Nom" value="<?= isset($_SESSION['inputs']['Nom']) ? $_SESSION['inputs']['Nom'] : '';?>">
+                    <input type="text" placeholder="Prénom" class="contact-form-txt" name="Prénom" value="<?= isset($_SESSION['inputs']['Prénom']) ? $_SESSION['inputs']['Prénom'] : '';?>">
+                    <input type="text" placeholder="Adresse Mail" class="contact-form-txt" name="AdresseMail" value="<?= isset($_SESSION['inputs']['AdresseMail']) ? $_SESSION['inputs']['AdresseMail'] : '';?>">
+                    <textarea placeholder="Écrire..." class="contact-form-textarea" name="Message"><?= isset($_SESSION['inputs']['Message']) ? $_SESSION['inputs']['Message'] : '';?></textarea>
+                    <input type="submit" value="Envoyer" class="contact-form-btn">
                 </form>
             </div>
         </div>
@@ -68,5 +80,9 @@
         }
     </script>
 </body>
-
 </html>
+
+<?php 
+unset($_SESSION['inputs']);
+unset($_SESSION['errors']);
+?>

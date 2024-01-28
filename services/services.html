@@ -7,17 +7,17 @@
     <title>Services</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <script src='main.js'></script>
+    <script src='app.js'></script>
 </head>
 
 <body>
-    <!--<div class="loader" id="loader">
+    <div class="loader" id="loader">
         <p>Chargement</p>
-    </div>-->
+    </div>
 
     <!-- Header -->
     <header>
-        <a href="/"><img src="img/logo.png" alt="Logo du cabinet"></a>
+        <a href="/"><img src="logo.png" alt="Logo du cabinet"></a>
         <ul>
             <li><a href="index.html" alt="Pour rediriger vers la page d'accueil">Accueil</a></li>
             <li><a href="Apropos/apropos.html" alt="Pour rediriger vers la page à propos">À propos</a></li>
@@ -43,12 +43,34 @@
         </div>
         <!--services-box-container------------------>
         <div class="s-box-co">
-            <!--box---------------------------->
+            <!--box-1---------------------------->
             <div class="s-box">
-                <!--img-->
-                <img src="dent.png" alt="logo dent">
+                <!--top-bar-->
+                <div class="bar"></div>
+                <!--img-------------------->
+                <img src="illusdents1.png" alt="logo dent">
                 <h1>Procédures de traitement</h1>
+                <p>Quelle est notre manière de travailler ?</p>
+                <a href="#" class="s-btn">Voir plus</a>
+            </div>
+            <!--box-2---------------------------->
+            <div class="s-box">
+                <!--top-bar-->
+                <div class="bar"></div>
+                <!--img-------------------->
+                <img src="illusdents2.png" alt="logo dent">
+                <h1>Services offerts</h1>
                 <p>Ces procédures seront offertes par nos soins si vous venez chez nous !</p>
+                <a href="#" class="s-btn">Voir plus</a>
+            </div>
+            <!--box-3---------------------------->
+            <div class="s-box">
+                <!--top-bar-->
+                <div class="bar"></div>
+                <!--img-------------------->
+                <img src="illusdents3.png" alt="logo dent">
+                <h1>Avant/Après</h1>
+                <p>Voici l'évolution des services proposés par notre cabinet.</p>
                 <a href="#" class="s-btn">Voir plus</a>
             </div>
         </div>
@@ -56,9 +78,15 @@
 
 
     <footer>
-        <img src="img/logo.png">
+        <img src="logo.png">
         <h2>®2023 - 2027 Dentiste Sourire Sain Inc.</h2>
     </footer>
+    <script src='app.js'></script>
+    <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
+    </script>
 </body>
 
 </html>

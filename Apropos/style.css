@@ -1,7 +1,10 @@
+/* Importation de la police Montserrat depuis Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
+
+/* Réinitialisation des marges et des espacements par défaut, définition de la boîte et de la couleur de fond */
 body {
-    font-size: 20px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,7 +12,10 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-header{
+
+
+/* Style de l'en-tête */
+header {
     background-color: #222222;
     position: relative;
     height: 80px;
@@ -40,38 +46,91 @@ header a {
 }
 
 header a:nth-child(2) {
-    font-size: 20px;
+    font-size: 16px;
     margin-left: 100px;
 }
 
-header>ul li {
+header>ul li:not(.sous-nav) {
     margin: 10px;
     font-weight: 600;
     display: inline-block;
     list-style: none;
-    transition: background-color 0,5s ease-in-out;
+    transition: background-color 0, 5s ease-in-out;
 }
 
 header>ul li a:hover {
     color: #fff;
 }
 
-.page-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; 
-    text-align: center;
+
+
+/* Style du sous-menu de navigation */
+.sous-nav {
+    z-index: 3;
+    list-style: none;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -22px;
+    background: #222222;
+    flex-direction: column;
+    width: 160px;
+    padding: 25px 0;
+    text-align: left;
 }
 
-.separator {
-    height: 3px;
-    background-color: #036D19;
+.sous-nav li {
+    margin: 10px 0;
+}
+
+.sous-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.2s ease-in-out;
+    display: block;
     width: 100%;
-    margin: 30px 0;
+    box-sizing: border-box;
+}
+
+.sous-nav a span {
+    display: inline-block;
+    width: 100%;
+}
+
+.sous-nav a:hover span {
+    color: #fff;
+}
+
+.sous-nav a:hover {
+    background-color: #036D19;
+    border-radius: 5px;
+}
+
+.has-sous-nav {
+    position: relative;
+}
+
+.has-sous-nav:hover .sous-nav {
+    display: flex;
+    position: absolute;
+}
+
+.has-sous-nav:not(:hover) .sous-nav {
+    display: none;
 }
 
 
+
+
+
+.picture-propos-text {
+    margin-bottom: 100px;
+}
+
+
+
+/* Style de la page principale */
 .page-main {
     display: block;
     width: 80%;
@@ -79,31 +138,39 @@ header>ul li a:hover {
     margin-top: 100px;
 }
 
-.picture-propos-text {
-    margin-bottom: 100px;
+/* Style du separateur */
+.separator {
+    height: 3px;
+    background-color: #036D19;
+    width: 100%;
+    margin: 20px 0;
 }
 
+
+
+
+/* Style du pied de page */
 footer {
-    height: 80px;
-    position: fixed;
-    bottom: 0;
+    height: 150px;
     width: 100%;
     background-color: #222222;
-    display: flex; 
+    display: flex;
     align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 footer img {
     margin-top: 10px;
-    width: 100px; 
-    height: auto; 
+    width: 100px;
+    height: auto;
     position: absolute;
-    left: 10px; 
+    left: 10px;
     top: 50%;
     transform: translate(0, -50%);
 }
 
-footer h2{
+footer h2 {
     padding-bottom: 20px;
     font-size: 16px;
     position: absolute;
@@ -113,6 +180,11 @@ footer h2{
     color: white;
 }
 
+
+
+
+
+/* Style du chargement */
 .loader {
     position: fixed;
     width: 100%;
@@ -120,10 +192,12 @@ footer h2{
     z-index: 99;
     background-color: #222222;
     top: 0;
-    left: 0; /* Assurez-vous que l'élément loader occupe tout l'écran */
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
     opacity: 1;
     transition: opacity 0.5s ease-out;
 }
@@ -135,6 +209,9 @@ footer h2{
     text-align: center;
 }
 
+body.loaded {
+    overflow: auto;
+}
 
 .loader p::after {
     content: '';
@@ -142,75 +219,29 @@ footer h2{
 }
 
 @keyframes dots {
-    0%, 20% {
+
+    0%,
+    20% {
         content: '.';
     }
+
     40% {
         content: '..';
     }
+
     60% {
         content: '...';
     }
-    80%, 100% {
+
+    80%,
+    100% {
         content: '';
     }
 }
 
 
-@media screen and (max-width: 1100px) {
-    .bienvenue>img {
-        width: 300px;
-    }
-    .texte p {
-        font-size: 16px;
-    }
-
-    .texte h1 {
-        font-size: 20px;
-    }
-
-    .bienvenue {
-        margin-bottom: 50px;
-    }
-
-    .a-propos {margin-bottom: 100px;}
-
-    .picture-propos {
-        width: 100%;
-        height: 300px;
-    }
-
-    .picture-propos-text {
-        margin: 10px
-    }
-
-    .picture-propos-text p {
-        font-size: 16px;
-    }
-
-    .picture-propos-text h2 {
-        font-size: 20px;
-    }
-
-
-    .title-category {
-        text-align: center;
-    }
-
-
-
-}
 
 @media screen and (max-width: 700px) {
-    .bienvenue {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .bienvenue > .texte{
-        width: initial;
-    }
-
 
     input, textarea, label, .commentaire-text p {
         font-size: 16px;
