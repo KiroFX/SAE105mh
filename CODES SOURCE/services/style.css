@@ -1,0 +1,384 @@
+/* Importation de la police Montserrat depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+/* Réinitialisation des marges et des espacements par défaut, définition de la boîte et de la couleur de fond */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Style de l'en-tête */
+header{
+    background-color: #222222;
+    position: relative;
+    height: 80px;
+    top: 0;
+}
+
+header>* {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 30px 0 10px;
+}
+
+header img {
+    padding-top: 30px;
+    width: 120px;
+}
+
+header>ul {
+    right: 0;
+    text-decoration: none;
+}
+
+header,
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header a:nth-child(2) {
+    font-size: 16px;
+    margin-left: 100px;
+}
+
+header>ul li:not(.sous-nav) {
+    margin: 10px;
+    font-weight: 600;
+    display: inline-block;
+    list-style: none;
+    transition: background-color 0,5s ease-in-out;
+}
+
+header>ul li a:hover {
+    color: #fff;
+}
+
+
+
+/* Style du sous-menu de navigation */
+.sous-nav {
+    z-index: 3;
+    list-style: none;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -22px;
+    background: #222222;
+    flex-direction: column;
+    width: 160px;
+    padding: 25px 0;
+    text-align: left; 
+}
+
+.sous-nav li {
+    margin: 10px 0;
+}
+
+.sous-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px; 
+    transition: background-color 0.2s ease-in-out;
+    display: block;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.sous-nav a span {
+    display: inline-block;
+    width: 100%;
+}
+
+.sous-nav a:hover span {
+    color: #fff;
+}
+
+.sous-nav a:hover {
+    background-color: #036D19;
+}
+
+.has-sous-nav {
+    position: relative; 
+}
+
+.has-sous-nav:hover .sous-nav{
+    display: flex;
+    position: absolute;
+}
+
+.has-sous-nav:not(:hover) .sous-nav {
+    display: none;
+}
+
+/* Style de la page principale */
+
+.services{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.s-heading{
+    text-align: center;
+}
+
+.s-heading h1{
+    color: #036D19;
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0px;
+}
+
+.s-heading p{
+    color: #222222;
+    font-size: 1rem;
+    margin: 5px;
+    text-align: center;
+}
+
+.s-box-co{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.s-box img{
+   height: 75px; 
+}
+
+.s-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 300px;
+    height: 400px;
+    padding: 20px 25px;
+    box-sizing: border-box;
+    margin: 30px;
+    position: relative;
+}
+
+.s-box h1{
+    text-align: center;
+    color: #036D19;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.s-box p{
+    color: #222222;
+    text-align: center;
+}
+
+.s-btn{
+    width: 140px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #036D19;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #222222;
+    margin-top: 10px;
+}
+
+.s-box:hover{
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.08);
+    transition: all ease 0.3s;
+}
+
+.s-btn:hover{
+    background-color: #036D19;
+    border: 1px solid #036D19;
+    color: #fff;
+    transition: all ease 0.3s;
+}
+
+.bar{
+    width: 100px;
+    height: 6px;
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    transform: translateX(-50%);
+    background-color: #036D19;
+    border-radius: 0px 0px 10px 10px;
+    display: none;
+    animation: bar 0.5s;
+}
+
+.s-box:hover .bar{
+    display: block;
+}
+
+@keyframes bar{
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 100px;
+    }
+}
+
+/* Style du separateur */
+.separator {
+    height: 3px;
+    background-color: #036D19;
+    width: 100%;
+    margin: 20px 0;
+}
+
+
+
+
+/* Style du pied de page */
+footer {
+    height: 150px;
+    width: 100%;
+    background-color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+footer img {
+    margin-top: 10px;
+    width: 100px;
+    height: auto;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+footer h2 {
+    padding-bottom: 20px;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+
+
+
+
+
+
+/* Style du chargement */
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: #222222;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.loader p {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+body.loaded {
+    overflow: auto;
+}
+
+.loader p::after {
+    content: '';
+    animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+
+    0%,
+    20% {
+        content: '.';
+    }
+
+    40% {
+        content: '..';
+    }
+
+    60% {
+        content: '...';
+    }
+
+    80%,
+    100% {
+        content: '';
+    }
+}
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 768px) {
+
+    header img {
+        width: 80px;
+    }
+    header>ul li a:nth-child(2) {
+        margin-left: 50px;
+    }
+}
+
+.s-box-co {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+.s-box {
+    width: calc(50% - 60px);
+    max-width: 300px;
+    margin: 15px;
+}
+
+.s-heading h1 {
+    font-size: 2rem;
+}
+
+.s-heading p {
+    font-size: 0.9rem;
+}
+
+footer img {
+    width: 60px;
+}
+
+footer h2 {
+    font-size: 14px;
+}

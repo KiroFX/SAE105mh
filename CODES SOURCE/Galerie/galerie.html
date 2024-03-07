@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cabinet Dentaire Sourire Sain - Galerie</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div class="loader" id="loader">
+        <p>Chargement</p>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <a href="../index.html">
+            <img src="../img/logo.png" alt="Logo du cabinet">
+        </a>
+        <ul>
+            <li><a href="../index.html" alt="Pour rediriger vers la page d'accueil">Accueil</a></li>
+            <li><a href="../Apropos/apropos.html" alt="Pour rediriger vers la page à propos">À propos</a></li>
+            <li class="has-sous-nav">
+                <span>Informations</span>
+                <ul class="sous-nav">
+                    <li><a href="../services/services.html">Services</a></li>
+                    <li><a href="../info-patients/info-patients.html">Informations patients</a></li>
+                    <li><a href="../temoignages/témoignages.html">Témoignages</a></li>
+                </ul>
+            </li>
+            <li><a href="../Nouscontacter/contact.php" alt="Pour rediriger vers la page contact">Contact</a></li>
+        </ul>
+    </header>
+    <!-- Header -->
+
+    <section class="page-main">
+        <h1>Galerie du cabinet Sourire Sain</h1>
+        <div class="galerie">
+            <div class="item"><img src="../imggalerie/photo1.jpg"></div>
+            <div class="item"><img src="../imggalerie/photo2.jpg"></div>
+            <div class="item"><img src="../imggalerie/photo3.jpg"></div>
+            <div class="item"><img src="../imggalerie/photo4.jpg"></div>
+
+            <div class="item"><img src="../imggalerie/photo5.jpg"></div>
+            <div class="item"><img src="../imggalerie/photo6.jpg"></div>
+            <div class="item"><img src="../imggalerie/photo7.jpg"></div>
+            <div class="item"><img src="../imggalerie/photo8.jpg"></div>
+
+            <div class="item"><img src="../imggalerie/photo9.jpg"></div>
+            <div class="item"><img src="../imggalerie/photo10.jpg"></div>
+            <div class="item"><img src="../imggalerie/photo11.jpg"></div>
+            <div class="item"><img src="../imggalerie/photo12.jpg"></div>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <img src="../img/logo.png">
+        <h2>®2023 - 2027 Dentiste Sourire Sain Inc.</h2>
+    </footer>
+    <script src="app.js"></script>
+
+    <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+
+</html>

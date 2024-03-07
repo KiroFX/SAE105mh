@@ -1,0 +1,521 @@
+/* Importation de la police Montserrat depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+/* Réinitialisation des marges et des espacements par défaut, définition de la boîte et de la couleur de fond */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/* Style de l'en-tête */
+header {
+    background-color: #222222;
+    position: relative;
+    height: 80px;
+    top: 0;
+}
+
+header>* {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 30px 0 10px;
+}
+
+header img {
+    padding-top: 30px;
+    width: 120px;
+}
+
+header>ul {
+    right: 0;
+    text-decoration: none;
+}
+
+header,
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header a:nth-child(2) {
+    font-size: 16px;
+    margin-left: 100px;
+}
+
+header>ul li:not(.sous-nav) {
+    margin: 10px;
+    font-weight: 600;
+    display: inline-block;
+    list-style: none;
+    transition: background-color 0, 5s ease-in-out;
+}
+
+header>ul li a:hover {
+    color: #fff;
+}
+
+
+
+/* Style du sous-menu de navigation */
+.sous-nav {
+    z-index: 3;
+    list-style: none;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -22px;
+    background: #222222;
+    flex-direction: column;
+    width: 160px;
+    padding: 25px 0;
+    text-align: left;
+}
+
+.sous-nav li {
+    margin: 10px 0;
+}
+
+.sous-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.2s ease-in-out;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sous-nav a span {
+    display: inline-block;
+    width: 100%;
+}
+
+.sous-nav a:hover span {
+    color: #fff;
+}
+
+.sous-nav a:hover {
+    background-color: #036D19;
+    border-radius: 5px;
+}
+
+.has-sous-nav {
+    position: relative;
+}
+
+.has-sous-nav:hover .sous-nav {
+    display: flex;
+    position: absolute;
+}
+
+.has-sous-nav:not(:hover) .sous-nav {
+    display: none;
+}
+
+
+
+/* Style du carrousel */
+#caroussel {
+    z-index: -3;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.images-caroussel {
+    display: flex;
+    animation-duration: 30s;
+    animation-name: imagesdentiste;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    white-space: nowrap;
+    height: 500px;
+}
+
+@keyframes imagesdentiste {
+    14% {
+        transform: translateX(0);
+    }
+
+    28% {
+        transform: translateX(-1600px)
+    }
+
+    42% {
+        transform: translateX(-3200px)
+    }
+
+    56% {
+        transform: translateX(-4400px);
+    }
+
+    70% {
+        transform: translateX(-3200px);
+    }
+
+    84% {
+        transform: translateX(-1600px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+
+/* Style de la page principale */
+.page-main {
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+
+
+
+/* Style de la section de bienvenue */
+.bienvenue {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.bienvenue>img {
+    max-width: 500px;
+    align-self: center;
+    border-radius: 5px;
+    flex-shrink: 0;
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0, 1);
+    transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-out;
+}
+
+.bienvenue>img:hover {
+    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.5);
+    transform: scale(1.005);
+}
+
+.bienvenue>.texte {
+    width: 500px;
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+.texte p {
+    text-align: justify;
+    font-size: 20px;
+    margin: 0;
+}
+
+
+/* Style de la section services */
+.text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 70px;
+}
+
+.text-box h1 {
+    margin-bottom: 10px;
+}
+
+.text-box .content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.text-content {
+    margin-right: 15px;
+}
+
+.text-box p {
+    text-align: justify;
+    padding: 0;
+    font-size: 16px;
+}
+
+.text-box img {
+    max-width: 500px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-out;
+    margin: 15px;
+}
+
+.text-box img:hover {
+    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.5);
+    transform: scale(1.005);
+}
+
+.s-btn {
+    text-decoration: none;
+    width: 140px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #036D19;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #222222;
+    margin-top: 10px;
+}
+
+.s-btn:hover {
+    background-color: #036D19;
+    border: 1px solid #036D19;
+    color: #fff;
+    transition: all ease 0.3s;
+}
+
+
+
+/* Style du separateur */
+.separator {
+    height: 3px;
+    background-color: #036D19;
+    width: 100%;
+    margin: 20px 0;
+}
+
+
+
+
+/* Style du pied de page */
+footer {
+    height: 150px;
+    width: 100%;
+    background-color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+footer img {
+    margin-top: 10px;
+    width: 100px;
+    height: auto;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+footer h2 {
+    padding-bottom: 20px;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+
+
+
+
+/* Style du chargement */
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: #222222;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.loader p {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+body.loaded {
+    overflow: auto;
+}
+
+.loader p::after {
+    content: '';
+    animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+
+    0%,
+    20% {
+        content: '.';
+    }
+
+    40% {
+        content: '..';
+    }
+
+    60% {
+        content: '...';
+    }
+
+    80%,
+    100% {
+        content: '';
+    }
+}
+
+
+
+
+/* Médias requêtes pour un design réactif */
+@media screen and (max-width: 1100px) {
+    .bienvenue>img {
+        width: 300px;
+    }
+
+    .texte p {
+        font-size: 16px;
+    }
+
+    .texte h1 {
+        font-size: 20px;
+    }
+
+    .bienvenue {
+        margin-bottom: 50px;
+    }
+
+    .a-propos {
+        margin-bottom: 100px;
+    }
+
+    .picture-propos {
+        width: 100%;
+        height: 300px;
+    }
+
+    .picture-propos-text {
+        margin: 10px
+    }
+
+    .picture-propos-text p {
+        font-size: 16px;
+    }
+
+    .picture-propos-text h2 {
+        font-size: 20px;
+    }
+
+
+    .title-category {
+        text-align: center;
+    }
+
+    .text-box>img {
+        max-width: 300px;
+        margin: 15px auto;
+        width: 100%;
+        height: 300px;
+    }
+
+    .text-box .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-content {
+        margin-right: 0;
+    }
+
+    .text-box p {
+        font-size: 16px;
+    }
+
+    .text-box {
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .bienvenue {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bienvenue>.texte {
+        width: initial;
+    }
+
+
+    input,
+    textarea,
+    label,
+    .commentaire-text p {
+        font-size: 16px;
+    }
+    
+    .picture-propos-text p,
+    .commentaire-text p,
+    .texte p {
+        font-size: 12px;
+    }
+
+    .form-top {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    input:not(input[type="submit"]),
+    textarea {
+        width: 100%;
+    }
+
+    .text-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text-box>img {
+        width: 100px;
+        height: auto;
+        margin: 40px;
+    }
+
+    .text-box .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-content {
+        margin: 15px;
+        margin-bottom: 0;
+    }
+
+    .text-box p {
+        font-size: 16px;
+    }
+}
